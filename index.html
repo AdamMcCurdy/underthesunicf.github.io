@@ -170,8 +170,22 @@
         
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 900px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         .product-card {
@@ -183,6 +197,9 @@
             text-decoration: none;
             color: inherit;
             cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .product-card:hover {
@@ -191,12 +208,16 @@
         }
         
         .product-card img {
+            height: 250px;
             width: 100%;
-            height: 200px;
             object-fit: cover;
         }
         
         .product-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             padding: 20px;
         }
         
@@ -462,13 +483,11 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#dealers">Dealers</a></li>
+                <li><a href="#products">Products & Partners</a></li>
                 <li><a href="#social-feed">Instagram</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#calendar">Calendar</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#b2b">B2B Portal</a></li>
             </ul>
         </nav>
     </header>
@@ -485,67 +504,54 @@
 
     <section id="products">
         <div class="container">
-            <h2>Our Products</h2>
+            <h2>Our Products & Partners</h2>
             <div class="product-grid">
                 <a href="https://www.superformicf.com/" target="_blank" class="product-card">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Superforms ICF">
+                    <img src="superforms-icf.png" alt="Superforms ICF">
                     <div class="product-info">
                         <h3>Superforms ICF</h3>
                         <p>High-quality Insulated Concrete Forms</p>
                     </div>
                 </a>
+                
                 <a href="https://www.mstrebar.com/" target="_blank" class="product-card">
-                    <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80" alt="Fiberglass Rebar">
+                    <img src="fiberglass-rebar.png" alt="Fiberglass Rebar">
                     <div class="product-info">
                         <h3>Fiberglass Rebar</h3>
                         <p>Durable and corrosion-resistant reinforcement</p>
                     </div>
                 </a>
+                
                 <a href="https://www.fab-form.com/fastfoot/fastfootOverview.php" target="_blank" class="product-card">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Fast Foot Bagged Footing Forms">
+                    <img src="fast-foot.png" alt="Fast Foot">
                     <div class="product-info">
-                        <h3>Fast Foot Bagged Footing Forms</h3>
-                        <p>Quick and easy foundation solutions</p>
+                        <h3>Fast Foot</h3>
+                        <p>Bagged footing forms for efficient foundations</p>
                     </div>
                 </a>
+                
                 <a href="https://dexerdry.com" target="_blank" class="product-card">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Dexerdry">
+                    <img src="dexerdry.jpg" alt="Dexerdry">
                     <div class="product-info">
                         <h3>Dexerdry</h3>
                         <p>Advanced waterproofing solutions</p>
                     </div>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="dealers">
-        <div class="container">
-            <h2>Our Trusted Dealers</h2>
-            <div class="dealer-grid">
-                <div class="dealer-card">
-                    <h3>Superforms ICF</h3>
-                    <a href="https://www.superformicf.com/" target="_blank">Visit Website</a>
-                </div>
-                <div class="dealer-card">
-                    <h3>Fiberglass Rebar</h3>
-                    <a href="https://www.mstrebar.com/" target="_blank">Visit Website</a>
-                </div>
-                <div class="dealer-card">
-                    <h3>Fast Foot Bagged Footing Forms</h3>
-                    <a href="https://www.fab-form.com/fastfoot/fastfootOverview.php" target="_blank">Visit Website</a>
-                </div>
-                <div class="dealer-card">
-                    <h3>Dexerdry</h3>
-                    <a href="https://dexerdry.com" target="_blank">Visit Website</a>
-                </div>
-                <div class="dealer-card">
-                    <h3>HVAC System</h3>
-                    <a href="https://minotair.com" target="_blank">MINOTAIR.com</a>
-                </div>
-                <div class="dealer-card">
-                    <h3>Fox Blocks</h3>
-                    <a href="https://www.foxblocks.com/" target="_blank">Visit Website</a>
+                
+                <a href="https://minotair.com" target="_blank" class="product-card">
+                    <img src="mitair.png" alt="Minotair HVAC">
+                    <div class="product-info">
+                        <h3>Minotair HVAC</h3>
+                        <p>Advanced climate control systems</p>
+                    </div>
+                </a>
+                
+                <div class="product-card">
+                    <img src="icf.jpg" alt="Sawtooth Designs">
+                    <div class="product-info">
+                        <h3>Sawtooth Designs LLC</h3>
+                        <p>Custom design solutions</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -651,31 +657,6 @@
                     </div>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
-            </div>
-        </div>
-    </section>
-
-    <section id="b2b">
-        <div class="container">
-            <h2>B2B Portal</h2>
-            <div class="b2b-grid">
-                <div class="b2b-calendar">
-                    <h3>Event Calendar</h3>
-                    <!-- Google Calendar Embed -->
-                    <iframe 
-                        src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America%2FNew_York" 
-                        style="border: 0" 
-                        width="100%" 
-                        height="600" 
-                        frameborder="0" 
-                        scrolling="no">
-                    </iframe>
-                    <a href="https://calendar.google.com/calendar/u/0?cid=YOUR_CALENDAR_ID" 
-                       class="btn" 
-                       target="_blank">
-                        Add to Your Calendar
-                    </a>
-                </div>
             </div>
         </div>
     </section>
